@@ -54,13 +54,15 @@ const std = {
 	email: 'feroz@gmail.com'
 }
 
-// Create a New Object O(1) **************
+// **********    Create a New Object O(1)   **************
+// **********    Create a New Object O(1)   **************
 students[std.id] = std;
 // console.log("crate new obj:", students);
 
 
 
-// Update a object O(1) **********
+//  *****************    Update a object O(1)   **********
+//  *****************    Update a object O(1)   **********
 const idToBeUpdated = '67de71e5-0eac-474f-ab51-850ba9b31ed5';
 const updatedData = {
 	name: 'Azizul',
@@ -75,7 +77,14 @@ students[idToBeUpdated] ={
 
 
 
-// Delete a object O(1) **********
+// **********   Delete a object O(1)   **********
+// **********   Delete a object O(1)   **********
 const idToBeDeleted = 'ebdf6b78-c32b-4b1d-8574-e8c655b05c1e';
 delete students[idToBeDeleted]
-console.log('Delete:', students);
+// console.log('Delete:', students);
+
+
+
+// ********   Get Anything if you have id or key O(1)   **********
+// ********   Get Anything if you have id or key O(1)   **********
+console.log(students['ee729e84-a84e-4adf-b32c-4647a7114d5b']);
