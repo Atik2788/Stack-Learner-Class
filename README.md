@@ -6,3 +6,4 @@
 #### ==> Create a new object inside a object.
 #### ==> Update a object inside a object.
 #### ==> Delete a object inside a object.
+#### ==> Get a object with obj key or id.
