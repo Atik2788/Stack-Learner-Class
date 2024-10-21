@@ -6,7 +6,8 @@ function uuidv4() {
 		return v.toString(16);
 	});
 }
-console.log("uid: ",uuidv4());
+// console.log("uid: ",uuidv4());
+
 /* const students = [
 	{
 		id: '67de71e5-0eac-474f-ab51-850ba9b31ed5',
@@ -44,7 +45,7 @@ const students = {
 	},
 }
 
-console.log(students);
+// console.log(students);
 
 // Create a New Object O(1)
 const std = {
@@ -53,6 +54,19 @@ const std = {
 	email: 'feroz@gmail.com'
 }
 
-// Create a New Object O(1)
+// Create a New Object O(1) **************
 students[std.id] = std;
-console.log("new:", students);
+console.log("crate new obj:", students);
+
+// Update a object O(1) **********
+const idToBeUpdated = '67de71e5-0eac-474f-ab51-850ba9b31ed5';
+const updatedData = {
+	name: 'Azizul',
+	email: 'azizul@gmail.com'
+}
+
+students[idToBeUpdated] ={
+	...students[idToBeUpdated],
+	...updatedData
+}
+console.log('update obj:', students);
