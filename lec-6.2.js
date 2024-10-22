@@ -27,7 +27,12 @@ const numbers = [1, 2, 3, false, '', NaN, 4, 5, 6]
 
 // we want this => "123falseNaN456"
 const result = numbers.reduce((acc, cur) =>{
-    acc += cur.toString()
+    // acc += cur.toString()
+    // return "123falseNaN456"
+    if(cur){
+        acc += cur.toString();
+    }
+
     return acc
 }, "")
 
