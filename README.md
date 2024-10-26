@@ -11,3 +11,9 @@
 ******************************************
 #### ==> Fetch from array and return object (6.3)
 #### ==> Fetch from array and return object and make a new objectwith name, take first letter or name and sort with letter. (6.4)
+
+
+******************************************
+******************************************
+### Stack-Learner-Class-8
+#### ==> realtime function, take function parameter, arguments and function body in an array and make function.
