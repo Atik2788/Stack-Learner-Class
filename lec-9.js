@@ -44,3 +44,15 @@ const power8 = power(8)
 
 console.log("sqr of 5:", sqr(5));
 console.log('cube of 3:', cube(3));
+
+// Power function 2
+function power2(num,pow){
+    let result = 1;
+    for(let i = 1; i <= pow; i++){
+        result *= num
+    }
+    return result
+}
+
+console.log("sqr2 of 8:", power2(8, 2));
+console.log('cube2 of 4:', power2(4, 3));
