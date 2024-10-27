@@ -1,17 +1,21 @@
-function generateTowRandomNumber (max, formUser) {
+//Higher Order Function
+//Higher Order Function
+function generateTowRandomNumber (max, callBack) {
     const random1 = Math.floor(Math.random() * max);
     const random2 = Math.floor(Math.random() * max);
-    const result = formUser(random1, random2)
+    const result = callBack(random1, random2)
 
     return result;
 }
 
 // first way***************
-function formUser(random1, random2, ){
+function formUserFn(random1, random2, ){
     console.log("numbers: ",random1, random2);
     return random1 * random2
 }
-console.log(generateTowRandomNumber(50, formUser));
+console.log(generateTowRandomNumber(5, formUserFn));
+
+
 
 // 2nd way ****************
 generateTowRandomNumber(50, (random1, random2) =>{
@@ -21,3 +25,22 @@ generateTowRandomNumber(50, (random1, random2) =>{
 console.log(generateTowRandomNumber(20, (ran1, ran2) => ran1 * ran2));
 console.log(generateTowRandomNumber(100, (ran1, ran2) => ran1 - ran2));
 console.log(generateTowRandomNumber(10, (ran1, ran2) => ran1 / ran2));
+
+
+// Power function
+function power(p){
+    return function (n){
+        let result = 1;
+        for(let i = 1; i <= p; i++){
+            result *= n
+        }
+        return result;
+    }
+}
+
+const sqr = power(2)
+const cube = power(3)
+const power8 = power(8)
+
+console.log("sqr of 5:", sqr(5));
+console.log('cube of 3:', cube(3));
