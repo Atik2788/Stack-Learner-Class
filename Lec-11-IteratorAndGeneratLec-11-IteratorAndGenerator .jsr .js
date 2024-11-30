@@ -41,7 +41,7 @@ while (true) {
 // (2) {value: "o", done: false}
 
 
-
+// genetator 
 function* range(start = 0, stop = 100, step = 5){
     for(let i = start; i <= stop; i+= step){
         yield i
@@ -56,3 +56,23 @@ console.log(rangeIt.next())
 for(let v of range()){
     console.log(v)
 }
+
+// generate Id with generator
+
+function* generateId() {
+    let index = 1;
+    while(true){
+        yield index++
+    }
+}
+
+const generateUserId = generateId()
+const generateProductId = generateId()
+
+console.log('User id', generateUserId.next().value)
+console.log('User id', generateUserId.next().value)
+console.log('User id', generateUserId.next().value)
+
+console.log('Product id', generateProductId.next().value)
+console.log('Product id', generateProductId.next().value)
+console.log('Product id', generateProductId.next().value)
