@@ -39,3 +39,20 @@ while (true) {
 // (2) {value: "l", done: false}
 // (2) {value: "l", done: false}
 // (2) {value: "o", done: false}
+
+
+
+function* range(start = 0, stop = 100, step = 5){
+    for(let i = start; i <= stop; i+= step){
+        yield i
+    }
+}
+
+const rangeIt = range();
+console.log(rangeIt.next())
+// console.log(rangeIt.next())
+// console.log(rangeIt.next())
+
+for(let v of range()){
+    console.log(v)
+}
